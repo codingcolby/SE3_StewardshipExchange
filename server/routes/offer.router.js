@@ -62,7 +62,7 @@ router.post("/", (req, res) => {
 
 // ----- UPDATE OFFER
 router.put("/:offer_id", (req, res) => {
-	const queryText = `UPDATE "offer"
+	const queryText = `UPDATE "offers"
 			SET "submitting_user_id" = $2,
 			"agency" = $3,
 			"contact_name" = $4,
@@ -109,7 +109,7 @@ router.put("/:offer_id", (req, res) => {
 // ----- DELETE OFFER
 router.delete("/:offer_id", (req, res) => {
 	const offerId = req.params.offer_id;
-	const queryText = `DELETE FROM "offer" WHERE "offer_id" = $1;`;
+	const queryText = `DELETE FROM "offers" WHERE "offer_id" = $1;`;
 
 	pool
 		.query(queryText, [offerId])
