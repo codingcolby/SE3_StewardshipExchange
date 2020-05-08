@@ -3,7 +3,7 @@ const pool = require("../modules/pool");
 const router = express.Router();
 
 // ----- GET ALL OFFERS
-router.get("/api/offer", (req, res) => {
+router.get("/api/offers", (req, res) => {
 	const queryText = `SELECT * FROM "offer" ORDER BY "submit_date" DESC;`;
 
 	pool
@@ -18,7 +18,7 @@ router.get("/api/offer", (req, res) => {
 });
 
 // ----- GET ALL OFFERS BY USER
-router.get("/api/offer/:submitting_user_id", (req, res) => {
+router.get("/api/offers/:submitting_user_id", (req, res) => {
 	const queryText = `SELECT * FROM "offer" WHERE "submitting_user_id" = $2 ORDER BY "submit_date" DESC;`;
 
 	pool
@@ -33,7 +33,7 @@ router.get("/api/offer/:submitting_user_id", (req, res) => {
 });
 
 // ----- POST NEW OFFER
-router.post("/api/offer", (req, res) => {
+router.post("/api/offers", (req, res) => {
 	const queryText = `INSERT INTO "offer" (
         "submitting_user_id",
         "agency",
@@ -61,7 +61,7 @@ router.post("/api/offer", (req, res) => {
 });
 
 // ----- UPDATE OFFER
-router.put("/api/offer/:offer_id", (req, res) => {
+router.put("/api/offers/:offer_id", (req, res) => {
 	const queryText = `UPDATE "offer"
 			SET "submitting_user_id" = $2,
 			"agency" = $3,
@@ -107,7 +107,7 @@ router.put("/api/offer/:offer_id", (req, res) => {
 });
 
 // ----- DELETE OFFER
-router.delete("/api/offer/:offer_id", (req, res) => {
+router.delete("/api/offers/:offer_id", (req, res) => {
 	const offerId = req.params.offer_id;
 	const queryText = `DELETE FROM "offer" WHERE "offer_id" = $1;`;
 

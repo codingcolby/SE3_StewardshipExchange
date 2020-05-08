@@ -27,7 +27,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 /* Routes */
 // app.use('/api/user', userRouter);
-app.use("/api/offer", offerRouter);
+app.use("/api/offers", offerRouter);
 app.use("/api/story", storyRouter);
 app.use("/api/contact", contactRouter);
 
