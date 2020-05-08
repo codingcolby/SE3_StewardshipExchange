@@ -6,16 +6,31 @@
 	display: inline-block;
 	color: black;
 	margin-bottom: 5px;
+	vertical-align: top;
 }
 
 .nav {
-	padding: 0 50px;
+	padding: 0px 0px 15px 50px;
 	background-color: gray;
+}
+
+img {
+	width: 23%;
+	float: right;
+}
+
+p {
+	vertical-align: top;
 }
 
 .noplacelike {
 	text-align: right;
-	padding-right: 50px;
+	padding-right: 30px;
+}
+
+.nav-link {
+	padding-right: 30px;
+	padding-bottom: 30px;
 }
 
 /* .nav-title {

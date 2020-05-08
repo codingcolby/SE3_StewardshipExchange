@@ -20,7 +20,9 @@ const Nav = () => (
 	// return (
 	<div>
 		<div className="nav">
+			<img src="images/archivesstorage.jpg" alt="storage" />
 			<h2 className="nav-title">The Stewardship Exchange</h2>
+
 			<p>
 				the <em>first</em> online resource for cultural heritage agencies to
 				share surplus preservation and conservation material for collections
@@ -44,8 +46,20 @@ const Nav = () => (
 			{/* </>
 				)} */}
 			{/* Always show this link since the about page is not protected */}
+			<Link className="nav-link" to="/login">
+				Log In
+			</Link>
+			<Link className="nav-link" to="/register">
+				Register
+			</Link>
+			<Link className="nav-link" to="/works">
+				How It Works
+			</Link>
+			<Link className="nav-link" to="/stories">
+				Exchange Stories
+			</Link>
 			<Link className="nav-link" to="/about">
-				About
+				About / Contact
 			</Link>
 		</div>
 		<div className="noplacelike">
