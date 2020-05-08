@@ -3,8 +3,8 @@ const pool = require("../modules/pool");
 const router = express.Router();
 
 // ----- GET ALL stories
-router.get("/api/story", (req, res) => {
-	const queryText = `SELECT * FROM "story" ORDER BY "story_date" DESC;`;
+router.get("/", (req, res) => {
+	const queryText = `SELECT * FROM "stories" ORDER BY "story_date" DESC;`;
 
 	pool
 		.query(queryText)
@@ -18,8 +18,8 @@ router.get("/api/story", (req, res) => {
 });
 
 // ----- POST NEW story
-router.post("/api/story", (req, res) => {
-	const queryText = `INSERT INTO "story" (
+router.post("/", (req, res) => {
+	const queryText = `INSERT INTO "stories" (
     "submit_story_user_id",
     "off_agency",
     "received_agency",
@@ -40,8 +40,8 @@ router.post("/api/story", (req, res) => {
 });
 
 // ----- UPDATE story
-router.put("/api/story/:story_id", (req, res) => {
-	const queryText = `UPDATE "story"
+router.put("/:story_id", (req, res) => {
+	const queryText = `UPDATE "stories"
 			SET "submit_story_user_id" = $2,
       "off_agency" = $3,
       "received_agency" = $4,
@@ -73,9 +73,9 @@ router.put("/api/story/:story_id", (req, res) => {
 });
 
 // ----- DELETE story
-router.delete("/api/story/:story_id", (req, res) => {
+router.delete("/:story_id", (req, res) => {
 	const storyId = req.params.story_id;
-	const queryText = `DELETE FROM "story" WHERE "story_id" = $1;`;
+	const queryText = `DELETE FROM "stories" WHERE "story_id" = $1;`;
 
 	pool
 		.query(queryText, [storyId])

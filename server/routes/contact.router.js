@@ -3,7 +3,7 @@ const pool = require("../modules/pool");
 const router = express.Router();
 
 // ----- ADD CONTACT INQUIRES
-router.post("/api/contact", (req, res) => {
+router.post("/", (req, res) => {
 	const queryText = `INSERT INTO "site_contact" (
 "person_name",
 "person_contact",
