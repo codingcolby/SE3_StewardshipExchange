@@ -1,10 +1,10 @@
 body {
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-	margin: 0px;
+	margin: 0;
 }
 
-.corecontent {
-	margin-left: 50px;
+.footer {
+	height: 10%;
 }
 
 .alert {

@@ -10,27 +10,49 @@
 }
 
 .nav {
-	padding: 0px 0px 15px 50px;
+	padding: 0px 0px 7px 50px;
 	background-color: gray;
 }
 
 img {
-	width: 23%;
+	object-fit: contain;
+	max-width: 216px;
 	float: right;
+	overflow-anchor: 0;
 }
 
 p {
 	vertical-align: top;
+	padding-bottom: 10px;
 }
 
 .noplacelike {
 	text-align: right;
 	padding-right: 30px;
+	margin-top: 15px;
 }
 
 .nav-link {
-	padding-right: 30px;
-	padding-bottom: 30px;
+	width: 75px;
+	white-space: nowrap;
+	height: 40px;
+	text-align: center;
+	border: 2px solid black;
+	padding: 5px 25px;
+	margin: 0px 0px 0px 0px;
+	border-radius: 0px 15px 0px 0px;
+}
+
+.active-nav {
+	width: 75px;
+	white-space: nowrap;
+	height: 40px;
+	text-align: center;
+	border: 2px solid black;
+	padding: 5px 25px;
+	margin: 0px 0px 5px 0px;
+	border-radius: 0px 15px 0px 0px;
+	background-color: silver;
 }
 
 /* .nav-title {
