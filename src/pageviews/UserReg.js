@@ -1,7 +1,8 @@
 import React from "react";
+import "../styles/Pageview.css";
 
 const UserReg = () => (
-	<div>
+	<div className="pagecore">
 		<p>User Registration Page</p>
 	</div>
 );

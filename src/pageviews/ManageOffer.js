@@ -1,7 +1,8 @@
 import React from "react";
+import "../styles/Pageview.css";
 
 const ManageOffer = () => (
-	<div>
+	<div className="pagecore">
 		<p>Manage Offer Page</p>
 	</div>
 );

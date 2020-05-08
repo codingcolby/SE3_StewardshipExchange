@@ -1,7 +1,8 @@
 import React from "react";
+import "../styles/Pageview.css";
 
 const Home = () => (
-	<div>
+	<div className="pagecore">
 		<p>Home Page</p>
 	</div>
 );

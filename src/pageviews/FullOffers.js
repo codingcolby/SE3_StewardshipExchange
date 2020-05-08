@@ -1,7 +1,8 @@
 import React from "react";
+import "../styles/Pageview.css";
 
 const FullOffers = () => (
-	<div>
+	<div className="pagecore">
 		<p>Full Offers Page</p>
 	</div>
 );

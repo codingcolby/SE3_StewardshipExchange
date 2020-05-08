@@ -1,7 +1,8 @@
 import React from "react";
+import "../styles/Pageview.css";
 
 const HowItWorks = () => (
-	<div>
+	<div className="pagecore">
 		<p>How It Works Page</p>
 	</div>
 );

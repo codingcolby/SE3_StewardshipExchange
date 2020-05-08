@@ -1,7 +1,8 @@
 import React from "react";
+import "../styles/Pageview.css";
 
 const AboutContact = () => (
-	<div>
+	<div className="pagecore">
 		<p>About and Contact Page</p>
 	</div>
 );
