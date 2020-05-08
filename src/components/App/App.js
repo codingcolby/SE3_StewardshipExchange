@@ -33,7 +33,7 @@ class App extends Component {
 
 	render() {
 		return (
-			<Router className="corecontent">
+			<Router>
 				<Nav />
 				<Route exact path="/" component={Home} />
 				<Route exact path="/home" component={Home} />
@@ -47,7 +47,10 @@ class App extends Component {
 				<Route exact path="/stories" component={Stories} />
 				<Route exact path="/works" component={HowItWorks} />
 				<Route exact path="/about" component={AboutContact} />
-				<Footer />
+
+				<div className="footer">
+					<Footer />
+				</div>
 			</Router>
 
 			// <Router>

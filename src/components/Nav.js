@@ -5,6 +5,10 @@ import { connect } from "react-redux";
 import "../styles/Nav.css";
 import mapStoreToProps from "../redux/mapStoreToProps";
 
+// activeNavChange = (className) => () => {
+// 	this.setState({ [className]: "active-nav" });
+// };
+
 const Nav = () => (
 	// const Nav = (props) => {
 	// 	let loginLinkData = {
@@ -45,7 +49,8 @@ const Nav = () => (
 			{/* <LogOutButton className="nav-link" /> */}
 			{/* </>
 				)} */}
-			{/* Always show this link since the about page is not protected */}
+			{/* Always show this link since the about page is not protected 
+			<Link onClick={this.activeNavChange} className="nav-link" to="/login">*/}
 			<Link className="nav-link" to="/login">
 				Log In
 			</Link>
@@ -66,9 +71,10 @@ const Nav = () => (
 			<Link to="/home">Home</Link>
 		</div>
 	</div>
-
-	//</div>
 );
+
+//</div>
+//)
 // };
 
 export default connect(mapStoreToProps)(Nav);
