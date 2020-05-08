@@ -51,6 +51,9 @@ const Nav = () => (
 				)} */}
 			{/* Always show this link since the about page is not protected 
 			<Link onClick={this.activeNavChange} className="nav-link" to="/login">*/}
+			<Link className="nav-link" to="/home">
+				Home
+			</Link>
 			<Link className="nav-link" to="/login">
 				Log In
 			</Link>
@@ -66,9 +69,6 @@ const Nav = () => (
 			<Link className="nav-link" to="/about">
 				About / Contact
 			</Link>
-		</div>
-		<div className="noplacelike">
-			<Link to="/home">Home</Link>
 		</div>
 	</div>
 );

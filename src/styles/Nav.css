@@ -7,11 +7,13 @@
 	color: black;
 	margin-bottom: 5px;
 	vertical-align: top;
+	text-shadow: 3px 4px 6px rgb(85, 128, 104);
 }
 
 .nav {
 	padding: 0px 0px 7px 50px;
 	background-color: gray;
+	box-shadow: 2px 2px 12px green;
 }
 
 img {
@@ -19,6 +21,7 @@ img {
 	max-width: 216px;
 	float: right;
 	overflow-anchor: 0;
+	box-shadow: -4px 4px 8px silver;
 }
 
 p {
@@ -35,12 +38,17 @@ p {
 .nav-link {
 	width: 75px;
 	white-space: nowrap;
-	height: 40px;
+	height: 30px;
 	text-align: center;
-	border: 2px solid black;
+	border: 1.5px solid black;
 	padding: 5px 25px;
 	margin: 0px 0px 0px 0px;
 	border-radius: 0px 15px 0px 0px;
+	color: black;
+	font-weight: bolder;
+	box-shadow: 12px -4px 8px silver;
+	text-decoration: underline;
+	text-decoration-color: rgb(13, 75, 13);
 }
 
 .active-nav {

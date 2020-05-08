@@ -8,7 +8,7 @@ const Home = (props) => (
 		<h3>Home Page</h3>
 		<p>
 			Welcome to the Stewardship Exchange.Here are the current offers:
-			{props.store.offers.off_detail}
+			{props.store.offers}
 		</p>
 	</div>
 );
