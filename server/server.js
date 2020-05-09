@@ -10,7 +10,7 @@ const bodyParser = require("body-parser");
 // Route includes
 // const userRouter = require('./routes/user.router');
 
-const offerRouter = require("./routes/offers.router");
+const offersRouter = require("./routes/offers.router");
 const storyRouter = require("./routes/story.router");
 const contactRouter = require("./routes/contact.router");
 
