@@ -19,7 +19,7 @@ import RegConfirm from "../../pageviews/RegConfirm";
 import Login from "../../pageviews/Login";
 import UserHome from "../../pageviews/UserHome";
 import FullOffers from "../../pageviews/FullOffers";
-import ManageOffer from "../../pageviews/ManageOffer";
+import ManageOffers from "../../pageviews/ManageOffers";
 import ManageStory from "../../pageviews/ManageStory";
 import Stories from "../../pageviews/Stories";
 import HowItWorks from "../../pageviews/HowItWorks";
@@ -42,7 +42,7 @@ class App extends Component {
 				<Route exact path="/userhome" component={UserHome} />
 				<Route exact path="/login" component={Login} />
 				<Route exact path="/offers" component={FullOffers} />
-				<Route exact path="/offermgmt" component={ManageOffer} />
+				<Route exact path="/offermgmt" component={ManageOffers} />
 				<Route exact path="/add_story" component={ManageStory} />
 				<Route exact path="/stories" component={Stories} />
 				<Route exact path="/works" component={HowItWorks} />
