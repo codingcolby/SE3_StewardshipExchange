@@ -1,3 +1,4 @@
+// Stores offers returned from server
 const offers = (state = {}, action) => {
 	switch (action.type) {
 		case "SET_OFFERS":
