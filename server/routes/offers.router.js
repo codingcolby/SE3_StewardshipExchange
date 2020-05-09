@@ -95,7 +95,7 @@ router.put("/:offer_id", (req, res) => {
 			newOffersData.off_cat,
 			newOffersData.off_detail,
 			newOffersData.offer_status,
-			offersId,
+			offerId,
 		])
 		.then((responseDb) => {
 			res.sendStatus(200);
@@ -112,7 +112,7 @@ router.delete("/:offer_id", (req, res) => {
 	const queryText = `DELETE FROM "offers" WHERE "offer_id" = $1;`;
 
 	pool
-		.query(queryText, [offersId])
+		.query(queryText, [offerId])
 		.then((responseDb) => {
 			res.sendStatus(200);
 		})
