@@ -10,7 +10,7 @@ const bodyParser = require("body-parser");
 // Route includes
 // const userRouter = require('./routes/user.router');
 
-const offerRouter = require("./routes/offer.router");
+const offerRouter = require("./routes/offers.router");
 const storyRouter = require("./routes/story.router");
 const contactRouter = require("./routes/contact.router");
 
@@ -27,7 +27,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 /* Routes */
 // app.use('/api/user', userRouter);
-app.use("/api/offers", offerRouter);
+app.use("/api/offers", offersRouter);
 app.use("/api/story", storyRouter);
 app.use("/api/contact", contactRouter);
 

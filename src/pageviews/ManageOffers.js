@@ -1,10 +1,10 @@
 import React from "react";
 import "../styles/Pageview.css";
 
-const ManageOffer = () => (
+const ManageOffers = () => (
 	<div className="pagecore">
 		<p>Manage Offer Page</p>
 	</div>
 );
 
-export default ManageOffer;
+export default ManageOffers;

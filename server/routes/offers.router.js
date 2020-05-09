@@ -79,23 +79,23 @@ router.put("/:offer_id", (req, res) => {
 			WHERE "offer_id" = $1;`;
 
 	const offerId = req.params.id;
-	const newOfferData = req.body;
+	const newOffersData = req.body;
 
 	pool
 		.query(queryText, [
-			newOfferData.submitting_user_id,
-			newOfferData.agency,
-			newOfferData.contact_name,
-			newOfferData.contact_email,
-			newOfferData.ten_digit_dash_phone1,
-			newOfferData.phone1_ext,
-			newOfferData.ship_options,
-			newOfferData.state,
-			newOfferData.city,
-			newOfferData.off_cat,
-			newOfferData.off_detail,
-			newOfferData.offer_status,
-			offerId,
+			newOffersData.submitting_user_id,
+			newOffersData.agency,
+			newOffersData.contact_name,
+			newOffersData.contact_email,
+			newOffersData.ten_digit_dash_phone1,
+			newOffersData.phone1_ext,
+			newOffersData.ship_options,
+			newOffersData.state,
+			newOffersData.city,
+			newOffersData.off_cat,
+			newOffersData.off_detail,
+			newOffersData.offer_status,
+			offersId,
 		])
 		.then((responseDb) => {
 			res.sendStatus(200);
@@ -112,7 +112,7 @@ router.delete("/:offer_id", (req, res) => {
 	const queryText = `DELETE FROM "offers" WHERE "offer_id" = $1;`;
 
 	pool
-		.query(queryText, [offerId])
+		.query(queryText, [offersId])
 		.then((responseDb) => {
 			res.sendStatus(200);
 		})
