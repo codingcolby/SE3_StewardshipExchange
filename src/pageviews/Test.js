@@ -3,19 +3,20 @@ import "../styles/Pageview.css";
 import { connect } from "react-redux";
 import mapStoreToProps from "../redux/mapStoreToProps";
 
-class FullOffers extends Component {
+class Test extends Component {
 	componentDidMount() {
 		this.props.dispatch({
-			type: "GET_OFFERS",
+			type: "SET_TEST",
 		});
 	}
 	render() {
 		return (
 			<div className="pagecore">
-				<p>Full Offers Page</p>
-				<p>Here are the current offers: {this.props.store.offers.off_detail}</p>
+				<p>Test Page</p>
+				{Test}
 			</div>
 		);
 	}
 }
-export default connect(mapStoreToProps)(FullOffers);
+
+export default connect(mapStoreToProps)(Test);

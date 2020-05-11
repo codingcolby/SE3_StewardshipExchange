@@ -19,6 +19,7 @@ router.get("/", (req, res) => {
 
 // ----- POST NEW story
 router.post("/", (req, res) => {
+	const newstoryData = req.body;
 	const queryText = `INSERT INTO "stories" (
     "submit_story_user_id",
     "off_agency",
@@ -27,9 +28,15 @@ router.post("/", (req, res) => {
     "narrative",
     "photo_file"
 				VALUES ($2, $3, $4, $5, $6, $7);`;
-
 	pool
-		.query(queryText, [req.body.name])
+		.query(queryText, [
+			newstoryData.submit_story_user_id,
+			newstoryData.off_agency,
+			newstoryData.received_agency,
+			newstoryData.title,
+			newstoryData.narrative,
+			newstoryData.photo_file,
+		])
 		.then((responseDb) => {
 			res.sendStatus(201);
 		})

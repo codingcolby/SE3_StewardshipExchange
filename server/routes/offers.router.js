@@ -20,9 +20,10 @@ router.get("/", (req, res) => {
 // ----- GET ALL OFFERS BY USER
 router.get("/:submitting_user_id", (req, res) => {
 	const queryText = `SELECT * FROM "offers" WHERE "submitting_user_id" = $2 ORDER BY "submit_date" DESC;`;
+	const submittinguserId = req.params.submitting_user_id;
 
 	pool
-		.query(queryText)
+		.query(queryText, [submittinguserId])
 		.then((responseDb) => {
 			res.send(responseDb.rows);
 		})
@@ -34,6 +35,7 @@ router.get("/:submitting_user_id", (req, res) => {
 
 // ----- POST NEW OFFER
 router.post("/", (req, res) => {
+	const newOffersData = req.body;
 	const queryText = `INSERT INTO "offers" (
         "submitting_user_id",
         "agency",
@@ -50,7 +52,20 @@ router.post("/", (req, res) => {
 				VALUES ($2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13);`;
 
 	pool
-		.query(queryText, [req.body.name])
+		.query(queryText, [
+			newOffersData.submitting_user_id,
+			newOffersData.agency,
+			newOffersData.contact_name,
+			newOffersData.contact_email,
+			newOffersData.ten_digit_dash_phone1,
+			newOffersData.phone1_ext,
+			newOffersData.ship_options,
+			newOffersData.state,
+			newOffersData.city,
+			newOffersData.off_cat,
+			newOffersData.off_detail,
+			newOffersData.offer_status,
+		])
 		.then((responseDb) => {
 			res.sendStatus(201);
 		})
@@ -75,7 +90,6 @@ router.put("/:offer_id", (req, res) => {
 			"off_cat" = $11,
 			"off_detail" = $12,
 			"offer_status" = $13,
-			"edit_date" = $15
 			WHERE "offer_id" = $1;`;
 
 	const offerId = req.params.id;

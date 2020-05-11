@@ -13,6 +13,7 @@ const bodyParser = require("body-parser");
 const offersRouter = require("./routes/offers.router");
 const storyRouter = require("./routes/story.router");
 const contactRouter = require("./routes/contact.router");
+const testRouter = require("./routes/test.router");
 
 // Body parser middleware
 app.use(bodyParser.json());
@@ -30,6 +31,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/api/offers", offersRouter);
 app.use("/api/story", storyRouter);
 app.use("/api/contact", contactRouter);
+app.use("/api/test", testRouter);
 
 // Serve static files
 app.use(express.static("build"));

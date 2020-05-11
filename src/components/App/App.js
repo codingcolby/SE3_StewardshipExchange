@@ -24,6 +24,7 @@ import ManageStory from "../../pageviews/ManageStory";
 import Stories from "../../pageviews/Stories";
 import HowItWorks from "../../pageviews/HowItWorks";
 import AboutContact from "../../pageviews/AboutContact";
+import Test from "../../pageviews/Test";
 import "../../styles/App.css";
 
 class App extends Component {
@@ -47,6 +48,7 @@ class App extends Component {
 				<Route exact path="/stories" component={Stories} />
 				<Route exact path="/works" component={HowItWorks} />
 				<Route exact path="/about" component={AboutContact} />
+				<Route exact path="/test" component={Test} />
 
 				<div className="footer">
 					<Footer />

@@ -19,15 +19,18 @@ router.get("/", (req, res) => {
 
 // ----- ADD CONTACT INQUIRES
 router.post("/", (req, res) => {
+	const newContactData = req.body;
 	const queryText = `INSERT INTO "site_contact" (
 "person_name",
 "person_contact",
-"contact_msg", 
-"msg_received")
-VALUES ($1, $2, $3, $4);`;
-
+"contact_msg")
+VALUES ($1, $2, $3);`;
 	pool
-		.query(queryText, [req.body.name])
+		.query(queryText, [
+			newContactData.person_name,
+			newContactData.person_contact,
+			newContactData.contact_msg,
+		])
 		.then((responseDb) => {
 			res.sendStatus(201);
 		})
